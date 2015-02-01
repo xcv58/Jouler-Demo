@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Jouler Demo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="permission_name">org.phone_lab.jouler.joulerbase</string>
+    <string name="call_baseapp_extra_source_name">SOURCE</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="not_selected_in_jouler_base_title">Not Selected Jouler Base</string>
+    <string name="not_selected_in_jouler_base_content">Please select Jouler Demo in JoulerBase</string>
+    <string name="no_jouler_base_app_title">No Jouler Base</string>
+    <string name="no_jouler_base_app_content">You haven\'t install Jouler Base App, do you want install it?</string>
+    <string name="jouler_base_packagename">org.phone_lab.jouler.joulerbase</string>
+
+    <string name="getStatistics">String getStatistics();</string>
+    <string name="controlCpuMaxFrequency">void controlCpuMaxFrequency(int freq);</string>
+    <string name="getAllCpuFrequencies">int[] getAllCpuFrequencies();</string>
+    <string name="getPriority">int getPriority(int uid);</string>
+    <string name="resetPriority">void resetPriority(int uid, int priority);</string>
+    <string name="addRateLimitRule">void addRateLimitRule(int uid);</string>
+    <string name="delRateLimitRule">void delRateLimitRule(int uid);</string>
+
+</resources>
