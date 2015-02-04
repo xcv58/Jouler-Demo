@@ -24,4 +24,8 @@
     <string name="addRateLimitRule">void addRateLimitRule(int uid);</string>
     <string name="delRateLimitRule">void delRateLimitRule(int uid);</string>
 
+    <string name="app_description">
+        You should put your app description here.
+        Otherwise the Base App is unable to display your app description.
+    </string>
 </resources>
