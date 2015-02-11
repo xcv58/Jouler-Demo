@@ -32,6 +32,8 @@ import java.util.Iterator;
 public class MainActivity extends Activity {
     public final static String TAG = "JoulerDemo";
 
+    private static boolean joulerBaseExist;
+    private static boolean permissionGranted;
     private boolean mBound;
     private boolean iJoulerBaseServiceBound;
     private DemoService mService;
@@ -80,9 +82,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        boolean joulerBaseExist = checkJoulerBaseExist();
+        joulerBaseExist = checkJoulerBaseExist();
         if (joulerBaseExist) {
-            boolean permissionGranted = checkJoulerBasePermission();
+            permissionGranted = checkJoulerBasePermission();
             if (permissionGranted) {
 //                Toast.makeText(this, "Got permission", Toast.LENGTH_SHORT).show();
                 setContentView(R.layout.activity_main);
@@ -97,6 +99,8 @@ public class MainActivity extends Activity {
     @Override
     public void onResume() {
         super.onResume();
+        if (!joulerBaseExist) { return; }
+        if (!permissionGranted) { return; }
         if (!mBound) {
             Intent intent = new Intent(this, DemoService.class);
             bindService(intent, mConnection, BIND_AUTO_CREATE);
@@ -110,6 +114,8 @@ public class MainActivity extends Activity {
     @Override
     public void onPause() {
         super.onPause();
+        if (!joulerBaseExist) { return; }
+        if (!permissionGranted) { return; }
         if (mBound) {
             unbindService(mConnection);
             mBound = false;
