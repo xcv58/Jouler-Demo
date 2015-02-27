@@ -1,18 +1,32 @@
-String packageName;
-long uiActivity;
-double getFgEnergy()
-double getBgEnergy()
-double getCpuEnergy()
-double getWakelockEnergy()
-double getWifiEnergy()
-double getSensorEnergy()
-double getMobileDataEnergy()
-double getWifiDataEnergy()
-double getVideoEnergy()
-double getAudioEnergy()
-long getFrame()
-boolean getState()
-boolean getThrottle()
-int getUid()
-int getCount()
-long getUsageTime()
+json.put("packageDetails", packageDetails);
+    String packageName;
+    long uiActivity;
+    double getFgEnergy()
+    double getBgEnergy()
+    double getCpuEnergy()
+    double getWakelockEnergy()
+    double getWifiEnergy()
+    double getSensorEnergy()
+    double getMobileDataEnergy()
+    double getWifiDataEnergy()
+    double getVideoEnergy()
+    double getAudioEnergy()
+    long getFrame()
+    boolean getState()
+    boolean getThrottle()
+    int getUid()
+    int getCount()
+    long getUsageTime()
+
+json.put("BluetoothEnergy", joulerStats.mSystemStats.getBluetoothEnergy());
+json.put("CurrentBgDischargeRate", joulerStats.mSystemStats.getCurrentBgDischargeRate());
+json.put("CurrentDischargeRate", joulerStats.mSystemStats.getCurrentDischargeRate());
+json.put("CurrentFgDischargeRate", joulerStats.mSystemStats.getCurrentFgDischargeRate());
+json.put("IdleEnergy", joulerStats.mSystemStats.getIdleEnergy());
+json.put("PhoneEnergy", joulerStats.mSystemStats.getPhoneEnergy());
+json.put("RadioEnergy", joulerStats.mSystemStats.getRadioEnergy());
+json.put("ScreenEnergy", joulerStats.mSystemStats.getScreenEnergy());
+json.put("TotalScreenOffTime", joulerStats.mSystemStats.getTotalScreenOffTime());
+json.put("TotalScreenOnTime", joulerStats.mSystemStats.getTotalScreenOnTime());
+json.put("Uptime", joulerStats.mSystemStats.getUptime());
+json.put("WifiEnergy", joulerStats.mSystemStats.getWifiEnergy());
